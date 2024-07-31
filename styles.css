@@ -5,41 +5,59 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-  }
-  
-  b { color: #ff3b30; }
-  
-  header {
+}
+
+b { color: #ff3b30; }
+
+header {
     background-color: red; /* Fundo vermelho */
     color: white; /* Texto branco */
-    padding: 10px 0;
-  }
-  
-  header h1 {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
     margin: 0;
-    padding: 0 20px;
     font-size: 24px;
-  }
-  
-  nav {
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ddd;
+}
+
+nav {
     display: flex;
     justify-content: space-around;
     background-color: #444;
     padding: 10px 0;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: white;
     text-decoration: none;
     padding: 8px 20px;
     transition: background-color 0.3s ease;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     background-color: #555;
-  }
-  
-  .container {
+}
+
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
@@ -47,15 +65,15 @@ body {
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .flex-container {
+}
+
+.flex-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  .flex-item {
+}
+
+.flex-item {
     flex: 1;
     min-width: 250px;
     background-color: #fff;
@@ -63,46 +81,45 @@ body {
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilos específicos para o acordeão */
-  .accordion {
+}
+
+/* Estilos específicos para o acordeão */
+.accordion {
     cursor: pointer;
     padding: 10px;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 10px;
-  }
-  
-  .content {
+}
+
+.content {
     display: none; /* Esconde o conteúdo por padrão */
     padding: 10px;
-  }
-  
-  .active .content {
+}
+
+.active .content {
     display: block; /* Exibe o conteúdo se a classe "active" estiver presente */
-  }
-  
-  .headline {
+}
+
+.headline {
     flex: 2; /* Ocupa o dobro do espaço */
-    background-color: #ffe1cd; /* Fundo levemente colorido para destaque */
+    background-color: #f9d4d4; /* Fundo levemente colorido para destaque */
     border: 2px solid #ff6f61; /* Borda destacada */
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); /* Sombra para realce */
-  }
-  
-  .headline h2 {
+}
+
+.headline h2 {
     color: #ff3b30; /* Cor do texto da manchete */
-  }
-  
-  .headline-image {
-    max-width: 100%;
+}
+
+.headline-image {
+    width: 100%;
     height: auto;
-    display: block;
-    margin: 20px 0;
-  }
-  
-  footer {
+    border-radius: 4px;
+}
+
+footer {
     background-color: #333;
     color: white;
     text-align: center;
@@ -110,46 +127,48 @@ body {
     position: relative;
     bottom: 0;
     width: 100%;
-  }
-  
-  /* Estilos para as seções lado a lado */
-  .multi-column {
+}
+
+/* Estilos para as seções lado a lado */
+.multi-column {
     display: flex;
     gap: 20px;
-  }
-  
-  .multi-column .flex-item {
+}
+
+.multi-column .flex-item {
     flex: 1;
-  }
-  
-  /* Estilos responsivos */
-  @media (max-width: 768px) {
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
     header h1, nav a {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .container {
-      width: 100%;
-      padding: 10px;
+        width: 100%;
+        padding: 10px;
     }
-  
+
     .headline {
-      flex: 1; /* Mantém proporção igual em telas menores */
+        flex: 1; /* Mantém proporção igual em telas menores */
     }
-  
+
     .multi-column {
-      flex-direction: column;
+        flex-direction: column;
     }
-  }
-  
-  .image-container {
+}
+
+.image-container {
     display: flex;
     gap: 20px;
-  }
-  
-  .image-container img {
-    max-width: 100%;
+    max-width: 100%; /* Garante que o contêiner não ultrapasse a largura da página */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+}
+
+.image-container img {
+    flex: 1;
+    max-width: calc(50% - 10px); /* Garante que as imagens não ultrapassem 50% da largura do contêiner, considerando o gap */
     height: auto;
     border-radius: 4px;
-  }
-  
+}
