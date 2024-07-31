@@ -1,0 +1,155 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  
+  b { color: #ff3b30; }
+  
+  header {
+    background-color: red; /* Fundo vermelho */
+    color: white; /* Texto branco */
+    padding: 10px 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 24px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #444;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .flex-item {
+    flex: 1;
+    min-width: 250px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos específicos para o acordeão */
+  .accordion {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .content {
+    display: none; /* Esconde o conteúdo por padrão */
+    padding: 10px;
+  }
+  
+  .active .content {
+    display: block; /* Exibe o conteúdo se a classe "active" estiver presente */
+  }
+  
+  .headline {
+    flex: 2; /* Ocupa o dobro do espaço */
+    background-color: #ffe5e5; /* Fundo levemente colorido para destaque */
+    border: 2px solid #ff6f61; /* Borda destacada */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); /* Sombra para realce */
+  }
+  
+  .headline h2 {
+    color: #ff3b30; /* Cor do texto da manchete */
+  }
+  
+  .headline-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Estilos para as seções lado a lado */
+  .multi-column {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .multi-column .flex-item {
+    flex: 1;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    header h1, nav a {
+      font-size: 18px;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .headline {
+      flex: 1; /* Mantém proporção igual em telas menores */
+    }
+  
+    .multi-column {
+      flex-direction: column;
+    }
+  }
+  
+  .image-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  

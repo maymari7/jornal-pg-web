@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .image-container {
+      display: flex;
+      gap: 10px; /* Espaço entre as imagens */
+    }
+
+    .headline-image {
+      width: 100%;
+      max-width: 300px; /* Ajuste conforme necessário */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MayNotices</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Início</a>
+    <a href="#about">Sobre</a>
+    <a href="#services">Serviços</a>
+    <a href="#contact">Contato</a>
+  </nav>
+
+  <div class="container">
+    <div class="flex-container">
+      <div class="flex-item headline accordion" onclick="toggleContent('content1')">
+        <h2>Estreia Nos Cinemas: Sociedade dos Mortos Não Vivos</h2>
+        <p>Prepare-se para uma <b>aventura sobrenatural!</b> "Sociedade dos Mortos Não Vivos" chega aos cinemas nesta sexta-feira, trazendo uma mistura única de humor, mistério e fantasia. 
+            Em um mundo onde os mortos-vivos se integram à sociedade, <b>um grupo de amigos improváveis se une para desvendar segredos antigos e enfrentar desafios inesperados.</b>
+            Não perca essa estreia imperdível que promete arrancar risadas e acelerar o coração. Garanta já o seu ingresso e venha viver essa experiência cinematográfica inesquecível!</p>
+        <div class="image-container">
+          <img src="https://i.pinimg.com/564x/da/f1/3b/daf13b2a1c579ca2874d2711dc82ae37.jpg" alt="Imagem 1" class="headline-image">
+          <img src="https://i.pinimg.com/564x/79/7a/9d/797a9d4ca397542cb0239bc83a255d0f.jpg" alt="Imagem 2" class="headline-image">
+        </div>
+      </div>
+
+      <div class="multi-column">
+        <div class="flex-item accordion" onclick="toggleContent('content2')">
+          <h2>O Retorno de "Amora nas Nuvens": O Que Esperar da Nova Temporada</h2>
+          <div id="content2" class="content">
+            <p>Novos Personagens, Reviravoltas Surpreendentes e Mistérios Não Resolvidos: Prepare-se para a Temporada que Vai Deixar Você Sem Fôlego!</p>
+            <img src="https://i.pinimg.com/564x/72/49/e4/7249e4e889868e6b8fcbf4873fc1c919.jpg" alt="Imagem Amora" class="headline-image">
+          </div>
+        </div>
+
+        <div class="flex-item accordion" onclick="toggleContent('content3')">
+          <h2>Pearl Mendez Sob Acusações de Plágio em Nova Produção Cinematográfica</h2>
+          <div id="content3" class="content">
+            <p>Atriz de "Rainha dos Porquinhos" enfrenta controvérsias após alegações de copiar enredo de roteiro concorrente</p>
+            <img src="https://i.pinimg.com/736x/8f/7f/c2/8f7fc25f9fcdb40d9a383fd3136a34e3.jpg" alt="Imagem da Pearl Mendez" class="headline-image">
+          </div>
+        </div>
+
+        <div class="flex-item">
+          <h2>Estreia de "Anos 23": O Filme de Terror Baseado em Fatos Reais que Está Assustando o Mundo</h2>
+          <p>Prepare-se para uma experiência aterrorizante com "Anos 23", o mais novo filme baseado em eventos reais que promete deixar o público em pânico.
+              Com uma produção impecável e uma história que vai gelar seus ossos, "Anos 23" é uma obra que você não vai querer perder.</p>
+          <img src="https://i.pinimg.com/564x/0d/46/09/0d4609a1d0996c09f4b0901bae099f9b.jpg" alt="Imagem de Anos 23" class="headline-image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 MayNotices</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
