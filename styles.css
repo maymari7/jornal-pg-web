@@ -86,7 +86,7 @@ body {
   
   .headline {
     flex: 2; /* Ocupa o dobro do espaço */
-    background-color: #ffe5e5; /* Fundo levemente colorido para destaque */
+    background-color: #ffe1cd; /* Fundo levemente colorido para destaque */
     border: 2px solid #ff6f61; /* Borda destacada */
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); /* Sombra para realce */
   }
